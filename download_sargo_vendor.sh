@@ -27,6 +27,8 @@ then
   tar xzf qcom-sargo-qq3a.200805.001-ebd290fb.tgz
   ./extract-google_devices-sargo.sh
   ./extract-qcom-sargo.sh
+  rm -f google_devices-sargo-qq3a.200805.001-ca5e20a1.tgz
+  rm -f qcom-sargo-qq3a.200805.001-ebd290fb.tgz
 fi
 
 echo "Done."
