@@ -29,6 +29,8 @@ then
   ./extract-qcom-sargo.sh
   rm -f google_devices-sargo-qq3a.200805.001-ca5e20a1.tgz
   rm -f qcom-sargo-qq3a.200805.001-ebd290fb.tgz
+  rm -f extract-google_devices-sargo.sh
+  rm -f extract-qcom-sargo.sh
 fi
 
 echo "Done."
