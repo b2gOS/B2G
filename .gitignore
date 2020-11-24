@@ -38,3 +38,4 @@ system/
 vendor/
 b2g_sdk/
 tmp_dist/
+patcher/
