@@ -58,4 +58,6 @@ fi
 
 mv .tmp-config .config
 
+export SKIP_ABI_CHECKS=true 
+
 ./build.sh ${@:2}
