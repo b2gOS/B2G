@@ -64,6 +64,21 @@ At boot time, you might need `adb shell setenforce 0` for B2G to boot (flash_sar
   
 If need to output a zip ROM file, you can use `./build.sh dist DIST_DIR=dist_output` instead of `./build.sh` in step 5.
 
+## B2G Generic System Images (B2G-GSI) 
+More [detail](https://github.com/phhusson/treble_experimentations/wiki) of which device is supported and which type for your device.  
+1. Fetch the code: `REPO_INIT_FLAGS="--depth=1" ./config.sh b2g_gsi`
+2. Setup your environment to fetch the custom NDK: `export LOCAL_NDK_BASE_URL='ftp://ftp.kaiostech.com/ndk/android-ndk'`
+3. Install Gecko dependencies: `cd gecko && ./mach bootstrap`, choose option 1 (Boot2Gecko).
+4. Build: `./build-gsi.sh [your_device_type_name] systemimage`
+
+   type:
+   - `gsi_arm64_ab` (arm64 partitionA/B)
+   - `gsi_arm64_a` (arm64 partitionA)
+   - `gsi_arm_ab` (arm partitionA/B)
+   - `gsi_arm_a` (arm partitionA)
+
+5. Flash: [click it](https://source.android.google.com/setup/build/gsi#flashing-gsis)
+
 # Re-building your own NDK
 
 Because it's using a different c++ namespace than the AOSP base, we can't use the prebuilt NDK from Google. If you can't use the one built by KaiOS, here are the steps to build your own:
